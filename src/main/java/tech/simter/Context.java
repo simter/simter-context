@@ -30,6 +30,7 @@ import java.util.Map;
  * <p>You can see that it just like to get a static constant value. But you need to know the difference.
  * A static constant always has the same value event in different thread.
  * The context data is isolated between each thread.
+ *
  * @author RJ
  */
 public class Context {
@@ -77,5 +78,12 @@ public class Context {
   @SuppressWarnings("unchecked")
   public static <V> V remove(String key) {
     return (V) share.get().remove(key);
+  }
+
+  /**
+   * Removes all of the share data from this context. The context will be empty after this call returns.
+   */
+  public static void clear() {
+    share.get().clear();
   }
 }
