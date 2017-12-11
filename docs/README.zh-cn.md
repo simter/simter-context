@@ -12,7 +12,7 @@
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-context</artifactId>
-  <version>0.1.0</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -45,7 +45,7 @@ Context.remove("userId");
 ```
 
 注：从上面的代码可以看出获取上下文数据（线程内的共享数据）跟获取一个静态常数值一样简单。
-不过必须弄清它们之间的区别。在不同的线程间静态常数的值是固定的，而上下文数据在不同的线程间是隔离的。
+不过必须弄清它们之间的区别：在不同的线程间静态常数的值是固定的，而上下文数据在不同的线程间是隔离的。
 
 ## 构建
 
@@ -60,13 +60,13 @@ mvn clean package
 ### 发布到局域网 Nexus 仓库
 
 ```bash
-mvn clean deploy -Plan
+mvn clean deploy -P lan
 ```
 
 ### 发布到 Sonatype 仓库
 
 ```bash
-mvn clean deploy -Psonatype
+mvn clean deploy -P sonatype
 ```
 
 发布成功后登陆到 <https://oss.sonatype.org>，在 `Staging Repositories` 找到这个包，然后将其 close 和 release。
@@ -75,12 +75,12 @@ mvn clean deploy -Psonatype
 ### 发布到 Bintray 仓库
 
 ```bash
-mvn clean deploy -Pbintray
+mvn clean deploy -P bintray
 ```
 
-发布之前要先在 Bintray 创建 package `https://bintray.com/simter/maven-repo/simter-context`。
-发布到的地址为 `https://api.bintray.com/maven/simter/maven-repo/simter-context/;publish=1`。
-发布成功后可以到 <https://simter.bintray.com/maven-repo/tech/simter/simter-context> 检查一下结果。
+发布之前要先在 Bintray 创建 package `https://bintray.com/simter/maven/tech.simter:simter-context`。
+发布到的地址为 `https://api.bintray.com/maven/simter/maven/tech.simter:simter-context/;publish=1`。
+发布成功后可以到 <https://jcenter.bintray.com/tech/simter/simter-context> 检查一下结果。
 
 
 [simter-parent]: https://github.com/simter/simter-parent/blob/master/docs/README.zh-cn.md

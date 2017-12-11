@@ -12,7 +12,7 @@ its value inside the method.
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-context</artifactId>
-  <version>0.1.0</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -44,9 +44,8 @@ Context.remove("userId");
 ...
 ```
 
-You can see that it just like to get a static constant value. But you need to know the difference.
-A static constant always has the same value even in different thread.
-The context data is isolated between each thread.
+You can see that it just like to get a static constant value. But you need to know the difference: 
+A static constant always has the same value even in different thread. But the context data is isolated between each thread.
 
 ## Build
 
@@ -62,13 +61,13 @@ First take a look at [simter-parent] deploy config.
 ### Deploy to LAN Nexus Repository
 
 ```bash
-mvn clean deploy -Plan
+mvn clean deploy -P lan
 ```
 
 ### Deploy to Sonatype Repository
 
 ```bash
-mvn clean deploy -Psonatype
+mvn clean deploy -P sonatype
 ```
 
 After deployed, login into <https://oss.sonatype.org>. Through `Staging Repositories`, search this package,
@@ -78,12 +77,12 @@ to [Maven Central Repository](http://repo1.maven.org/maven2/tech/simter/simter-c
 ### Deploy to Bintray Repository
 
 ```bash
-mvn clean deploy -Pbintray
+mvn clean deploy -P bintray
 ```
 
-Will deploy to `https://api.bintray.com/maven/simter/maven-repo/simter-context/;publish=1`.
-So first create a package `https://bintray.com/simter/maven-repo/simter-context` on Bintray.
-After deployed, check it from <https://simter.bintray.com/maven-repo/tech/simter/simter-context>.
+Will deploy to `https://api.bintray.com/maven/simter/maven/tech.simter:simter-context/;publish=1`.
+So first create a package `https://bintray.com/simter/maven/tech.simter:simter-context` on Bintray.
+After deployed, check it from <https://jcenter.bintray.com/tech/simter/simter-context>.
 
 
 [simter-parent]: https://github.com/simter/simter-parent
