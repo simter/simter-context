@@ -4,11 +4,12 @@
   <parent>
     <groupId>tech.simter</groupId>
     <artifactId>simter-parent</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.3.0</version>
     <relativePath/>
   </parent>
   <artifactId>simter-context</artifactId>
   <packaging>jar</packaging>
+  <version>0.3.0</version>
   <name>simter-context</name>
   <description>System Context Interface and holder</description>
   <url>https://github.com/simter/simter-context</url>
