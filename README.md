@@ -12,7 +12,7 @@ its value inside the method.
 <dependency>
   <groupId>tech.simter</groupId>
   <artifactId>simter-context</artifactId>
-  <version>0.3.0</version>
+  <version>1.0.0</version>
 </dependency>
 ```
 
