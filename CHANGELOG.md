@@ -1,4 +1,11 @@
-# [simter-context](https://github.com/simter/simter-context) changelog
+# simter-context changelog
+
+## 1.1.0 - 2019-07-02
+
+No code changed, just polishing maven config.
+
+- Use JUnit5 instead of JUnit4
+- Change parent to simter-build-1.2.0
 
 ## 1.0.0 - 2019-01-08
 
