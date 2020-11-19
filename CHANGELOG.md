@@ -1,5 +1,9 @@
 # simter-context changelog
 
+## 2.0.0 - 2020-11-19
+
+- Upgrade to simter-build-2.0.0
+
 ## 1.1.0 - 2019-07-02
 
 No code changed, just polishing maven config.
