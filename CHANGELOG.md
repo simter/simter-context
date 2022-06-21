@@ -1,5 +1,9 @@
 # simter-context changelog
 
+## 3.0.0 - 2022-06-21
+
+- Upgrade to simter-build-3.0.0
+
 ## 2.0.0 - 2020-11-19
 
 - Upgrade to simter-build-2.0.0
