@@ -27,7 +27,7 @@ import java.util.Map;
  * // delete shared data anywhere
  * Context.remove("userId");
  * </pre>
- * <p>You can see that it just like to get a static constant value. But you need to know the difference.
+ * <p>You can see that it is just like to get a static constant value. But you need to know the difference.
  * A static constant always has the same value event in different thread.
  * The context data is isolated between each thread.
  *
@@ -35,7 +35,7 @@ import java.util.Map;
  */
 public class Context {
   // containing the thread-local share data
-  private static ThreadLocal<Map<String, Object>> share = ThreadLocal.withInitial(HashMap::new);
+  private static final ThreadLocal<Map<String, Object>> share = ThreadLocal.withInitial(HashMap::new);
 
   /**
    * Get all share date
@@ -51,7 +51,7 @@ public class Context {
    *
    * @param key the key
    * @param <V> the expected return type
-   * @return the value or <tt>null</tt> if there was no mapping for <tt>key</tt>
+   * @return the value or <b>null</b> if there was no mapping for <b>key</b>
    */
   @SuppressWarnings("unchecked")
   public static <V> V get(String key) {
@@ -73,7 +73,7 @@ public class Context {
    *
    * @param key the key
    * @param <V> the expected return type
-   * @return the previous value associated with <tt>key</tt>, or <tt>null</tt> if there was no mapping for <tt>key</tt>.
+   * @return the previous value associated with <b>key</b>, or <b>null</b> if there was no mapping for <b>key</b>.
    */
   @SuppressWarnings("unchecked")
   public static <V> V remove(String key) {
@@ -81,7 +81,7 @@ public class Context {
   }
 
   /**
-   * Removes all of the share data from this context. The context will be empty after this call returns.
+   * Removes all the share data from this context. The context will be empty after this call returns.
    */
   public static void clear() {
     share.get().clear();
